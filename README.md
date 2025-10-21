@@ -10,6 +10,13 @@ This extension collects links by a selector from the current page, then visits e
 - Regex / case sensitive / whole word / dry run options.
 - Progress bar and log.
 
+## 🛠 Manual Installation (Optional for Developers)
+
+1. Clone or download the repo
+2. Open Chrome and go to `chrome://extensions/`
+3. Enable **Developer mode**
+4. Click **Load unpacked**
+5. Select the folder containing the extension files
 
 ## Notes
 - If the editor is a SPA/virtual editor, the script triggers `input` and `change` events to help frameworks detect the change. For custom save flows, you may still need to click a Save button—this tool doesn’t auto‑save.
@@ -20,4 +27,5 @@ This extension collects links by a selector from the current page, then visits e
 ## Hardening / Tweaks
 - Increase `waitForSelector` timeout in `content_replace.js` if some pages are slow.
 - If the editor is shadow‑DOM based, update `waitForSelector` to pierce shadow roots.
+
 - To open each URL in a **new tab** instead of reusing the active tab, modify `processQueue()` to `await chrome.tabs.create({ url })` and track those tabs.
