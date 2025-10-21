@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Batch Search & Replace via Link List",
+  "version": "1.0.2",
+  "description": "Manually injects content script into Sudowrite iframe.",
+  "action": { "default_popup": "popup.html" },
+  "permissions": ["activeTab", "scripting", "tabs", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "background": { "service_worker": "service_worker.js" }
+}

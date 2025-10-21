@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Replace</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+<div class="card">
+<h1>Batch Search & Replace</h1>
+<label class="lbl">Link selector
+  <input id="linkSelector" type="text" value=".list-container.styled-scrollbars a.document-label" />
+</label>
+<div class="row">
+  <label class="lbl grow">Find
+    <input id="findText" type="text" placeholder="Search term" />
+  </label>
+  <label class="lbl grow">Replace
+    <input id="replaceText" type="text" placeholder="Replacement" />
+  </label>
+</div>
+<label class="lbl">Editor iframe
+  <input id="editorSelector" type="text" value="#editorContainer" />
+</label>
+<div class="opts">
+  <label><input id="caseSensitive" type="checkbox" /> Case sensitive</label>
+  <label><input id="dryRun" type="checkbox" /> Dry run</label>
+</div>
+<div class="row gap">
+  <button id="startBtn" class="primary">Start</button>
+</div>
+<div id="status" class="status">Idle.</div>
+<progress id="progress" max="100" value="0"></progress>
+<details class="log"><summary>Log</summary><pre id="log"></pre></details>
+</div>
+<script src="popup.js"></script>
+</body>
+</html>
